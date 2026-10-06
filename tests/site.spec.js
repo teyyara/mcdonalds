@@ -132,7 +132,20 @@ test('contact form validates and stays local', async ({ page }) => {
   await expect(page.getByText(/submitted locally/i)).toBeVisible();
 });
 
-test('mobile layout has no horizontal overflow', async ({ page }) => {
+async function primeLazyImages(page) {
+  await page.evaluate(async () => {
+    const step = Math.max(window.innerHeight * 0.8, 500);
+    const max = document.documentElement.scrollHeight;
+    for (let y = 0; y <= max; y += step) {
+      window.scrollTo(0, y);
+      await new Promise(resolve => setTimeout(resolve, 90));
+    }
+    window.scrollTo(0, 0);
+  });
+  await page.waitForTimeout(250);
+}
+
+test('mobile layout has no horizontal overflow', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   const overflow = await page.evaluate(() => ({
@@ -140,7 +153,16 @@ test('mobile layout has no horizontal overflow', async ({ page }) => {
     clientWidth: document.documentElement.clientWidth
   }));
   expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.clientWidth + 1);
-  await page.screenshot({ path: 'test-results/mobile-home.png', fullPage: true });
+
+  await primeLazyImages(page);
+  await page.screenshot({ path: testInfo.outputPath('mobile-home.png'), fullPage: true });
+});
+
+test('desktop visual evidence captures the fully loaded homepage', async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
+  await primeLazyImages(page);
+  await page.screenshot({ path: testInfo.outputPath('desktop-home.png'), fullPage: true });
 });
 
 test('axe accessibility scan has no critical or serious violations on key routes', async ({ page }) => {
