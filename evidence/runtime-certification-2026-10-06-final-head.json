@@ -1,0 +1,58 @@
+{
+  "release_id": "AEOS-MCD-2026-10-06-CURRENT-HEAD-01",
+  "implementation_artifact_commit": "fda0212996471499b1afe339743d3c126fac8c71",
+  "current_candidate_checkpoint": "426711ad8193a66346d4373f76356f704faaaa67",
+  "certification_run": {
+    "workflow": "Autonomous Website Validation",
+    "run_id": 37508708965,
+    "run_number": 35,
+    "conclusion": "success",
+    "playwright_axe_job_id": 112424040076,
+    "lighthouse_job_id": 112424039878,
+    "runner_os": "GitHub-hosted Ubuntu runner"
+  },
+  "browser_evidence": {
+    "targets": ["Chromium", "Firefox", "WebKit", "Mobile Chromium"],
+    "artifact_id": 11432198954,
+    "artifact_sha256": "sha256:f77a176fb4b8a8c6fefbcd03b44543c6dab2d6665d5c28804b178f5b466330f0",
+    "note": "Desktop and mobile screenshots were captured after explicitly priming lazy-loaded images."
+  },
+  "gates": {
+    "requirements": "PASS",
+    "critical_journeys": "PASS",
+    "accessibility": "PASS",
+    "responsive_behavior": "PASS",
+    "performance": "PASS",
+    "security": "PASS — scoped static/client threat model",
+    "seo": "PASS",
+    "visual_quality": "PASS",
+    "ux_quality": "PASS",
+    "robustness": "PASS",
+    "validator_assurance": "PASS",
+    "stability": "PASS",
+    "regression": "PASS",
+    "evidence_completeness": "PASS",
+    "artifact_identity": "PASS"
+  },
+  "confidence": {
+    "requirements": "HIGH",
+    "functional": "HIGH",
+    "accessibility": "MEDIUM — automated runtime evidence, not WCAG certification",
+    "performance": "HIGH",
+    "security": "MEDIUM",
+    "visual": "HIGH",
+    "production": "LOW — not deployed",
+    "business_outcome": "LOW / NOT MEASURED"
+  },
+  "production_status": "CERTIFIED RELEASE CANDIDATE — READY FOR HUMAN ACCEPTANCE; NOT DEPLOYED",
+  "decision": "READY FOR HUMAN ACCEPTANCE",
+  "residual_risks": [
+    "External image dependencies remain runtime dependencies.",
+    "Menu prices, restaurants, availability and rewards are illustrative demo data.",
+    "No real account, payment, ordering or production observability layer is present.",
+    "WebKit evidence is not equivalent to testing actual Safari.",
+    "Automated accessibility evidence is not manual screen-reader or formal WCAG certification.",
+    "No real-user or commercial outcome evidence exists yet."
+  ],
+  "append_only_note": "This is a new evidence record. Historical certification evidence was not overwritten by this record."
+}
