@@ -38,9 +38,10 @@ test('homepage renders with core navigation and no page errors', async ({ page }
   });
 
   await expect(page).toHaveTitle(/McDonald's/);
-  await expect(page.getByRole('link', { name: 'Our Menu' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Rewards' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Locate' })).toBeVisible();
+  const header = page.locator('header');
+  await expect(header.getByRole('link', { name: 'Our Menu' }).first()).toBeVisible();
+  await expect(header.getByRole('link', { name: 'Rewards' }).first()).toBeVisible();
+  await expect(header.getByRole('link', { name: 'Locate' }).first()).toBeVisible();
   await expect(page.getByRole('link', { name: 'Order Now' })).toBeVisible();
 
   expect(pageErrors).toEqual([]);
@@ -98,7 +99,7 @@ test('rewards earn and reset locally', async ({ page }) => {
   await page.getByRole('button', { name: '+100 points' }).click();
   await expect(page.getByText('220', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Reset' }).click();
-  await expect(page.getByText('0', { exact: true })).toBeVisible();
+  await expect(page.locator('#main .points')).toHaveText('0');
 });
 
 test('restaurant locator can search and select a sample restaurant', async ({ page }) => {
@@ -107,7 +108,7 @@ test('restaurant locator can search and select a sample restaurant', async ({ pa
   await page.getByLabel('Search restaurants').fill('Riverside');
   await expect(page.getByRole('heading', { name: /Riverside/ })).toBeVisible();
   await page.getByRole('button', { name: /Use this restaurant/ }).click();
-  await expect(page.getByRole('heading', { name: 'Demo checkout' })).toBeVisible();
+  await expect(page.getByText('Sample restaurant selected.')).toBeVisible();
 });
 
 test('contact form validates and stays local', async ({ page }) => {
