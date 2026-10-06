@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-06",
+  "repository_write": true,
+  "local_static_server": true,
+  "node_syntax_check": true,
+  "remote_script_syntax_check": true,
+  "chromium_binary": true,
+  "browser_runtime_certification": false,
+  "firefox": false,
+  "webkit": false,
+  "actual_safari": false,
+  "screen_reader_runtime": false,
+  "real_mobile_device": false,
+  "payment_sandbox": false,
+  "production_access": false,
+  "field_rum": false,
+  "continuous_monitoring": false,
+  "note": "Repository and static validation are available. Browser runtime certification is not available in the current execution environment and must remain BLOCKED."
+}
