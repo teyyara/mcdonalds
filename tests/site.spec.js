@@ -82,7 +82,7 @@ test('product detail, cart persistence, quantity changes and checkout complete',
   await page.getByRole('button', { name: /Open cart/ }).click();
   await expect(page.getByRole('heading', { name: 'Your order' })).toBeVisible();
   await expect(page.getByText('Big Mac®').last()).toBeVisible();
-  await expect(page.getByText('$11.98')).toBeVisible();
+  await expect(page.locator('.summary .row.total strong')).toHaveText('$11.98');
 
   await page.getByRole('button', { name: /Continue to demo checkout/ }).click();
   await page.getByLabel('Name').fill('Demo Customer');
