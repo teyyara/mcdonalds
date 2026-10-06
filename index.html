@@ -298,8 +298,7 @@
 
   function bind(){
     var ms=document.getElementById('menuSearch');
-    if(ms)ms.addEventListener('input',function(e){state.query=e.target.value;});
-    if(ms)ms.addEventListener('change',render);
+    if(ms)ms.addEventListener('input',function(e){state.query=e.target.value;var pos=e.target.selectionStart;render();var next=document.getElementById('menuSearch');if(next){next.focus();next.setSelectionRange(pos,pos)}});
     var sort=document.getElementById('menuSort');
     if(sort)sort.addEventListener('change',function(e){state.sort=e.target.value;render()});
     var ss=document.getElementById('storeSearch');
