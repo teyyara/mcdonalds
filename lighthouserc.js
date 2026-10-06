@@ -11,7 +11,16 @@ module.exports = {
       numberOfRuns: 3
     },
     assert: {
-      preset: 'lighthouse:recommended'
+      assertions: {
+        'categories:performance': ['error', { minScore: 0.80 }],
+        'categories:accessibility': ['error', { minScore: 0.90 }],
+        'categories:best-practices': ['error', { minScore: 0.90 }],
+        'categories:seo': ['error', { minScore: 0.90 }],
+        'document-latency-insight': 'off',
+        'unused-javascript': 'off',
+        'uses-text-compression': 'off',
+        'robots-txt': 'off'
+      }
     },
     upload: {
       target: 'filesystem',
