@@ -1,14 +1,14 @@
 {
   "release_id": "AEOS-MCD-2026-10-06-CERTIFIED-01",
-  "validated_artifact_commit": "7a76d52fa394575e028a2e6dcd527b05125119d9",
+  "validated_artifact_commit": "fda0212996471499b1afe339743d3c126fac8c71",
   "candidate_branch": "aeos/mcdonalds-release-candidate",
   "certification_run": {
     "workflow": "Autonomous Website Validation",
-    "run_id": 37505976197,
-    "run_number": 28,
+    "run_id": 37507832395,
+    "run_number": 32,
     "conclusion": "success",
-    "playwright_axe_job_id": 112415207668,
-    "lighthouse_job_id": 112415207963,
+    "playwright_axe_job_id": 112420924339,
+    "lighthouse_job_id": 112420924757,
     "runner_os": "Ubuntu 24.04.5 LTS"
   },
   "browser_evidence": {
@@ -18,8 +18,8 @@
       "WebKit",
       "Mobile Chromium"
     ],
-    "evidence_artifact_id": 11432675177,
-    "evidence_artifact_sha256": "sha256:a21b0d801978f2e9bc6a92d9d57dd8088a413560d308451fc51983c1a171efa8",
+    "evidence_artifact_id": 11433060873,
+    "evidence_artifact_sha256": "sha256:140681bf19004f8d55c2695da50b7064e335a1d28eecac7140f3e5b403bc08ef",
     "note": "Desktop and mobile screenshots were captured after explicitly priming lazy-loaded images."
   },
   "gates": {
@@ -37,7 +37,7 @@
     "stability": "PASS",
     "regression": "PASS — current suite green; no prior accepted product baseline existed",
     "evidence_completeness": "PASS for defined candidate scope and available environments",
-    "artifact_identity": "PASS — production artifact identity is the exact validated implementation commit recorded above"
+    "artifact_identity": "PASS — final candidate head fda0212996471499b1afe339743d3c126fac8c71 is the exact head certified by run #32; the stable main history was incorporated without changing the certified implementation tree"
   },
   "confidence": {
     "requirements": "HIGH",
