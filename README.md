@@ -32,4 +32,14 @@ Product/menu naming and digital-experience patterns are grounded in current offi
 
 ## Current validation state
 
-The active release candidate is validated by the repository's GitHub Actions workflow on PR synchronization. Runtime certification remains evidence-driven; a green browser/Lighthouse run is required before release.
+The active release candidate is validated by the repository's GitHub Actions workflow on PR synchronization. The exact candidate commit `17baa3fdd0736f6802493a041bc68da7f9edb3f0` passed the full Playwright/axe browser certification and Lighthouse quality gate.
+
+The candidate is being promoted through Pull Request #1 after resolving the README-only branch divergence with `main`. `main` remains the stable handoff branch until the post-merge validation run is green.
+
+## Progress / review
+
+The active release candidate is developed on [`aeos/mcdonalds-release-candidate`](https://github.com/teyyara/mcdonalds/tree/aeos/mcdonalds-release-candidate).
+
+Review it in [Pull Request #1](https://github.com/teyyara/mcdonalds/pull/1).
+
+**Important:** This is a demonstration website, not an official McDonald's site or live ordering system.
