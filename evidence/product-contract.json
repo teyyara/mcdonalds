@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "project": "McDonald's-style website prototype",
+  "business_objective": "Create a polished, functional restaurant digital experience prototype covering discovery, menu, deals, rewards, restaurant selection and demo ordering.",
+  "target_audience": "Customers exploring a fast-food menu and digital ordering experience.",
+  "primary_user_intent": "Discover food, explore promotions, locate a restaurant, build a cart and complete a clearly labeled local demo checkout.",
+  "scope": {
+    "included": [
+      "responsive homepage",
+      "menu search/filter/sort",
+      "product detail dialog",
+      "cart",
+      "local demo checkout",
+      "local demo rewards",
+      "sample restaurant locator",
+      "deals",
+      "app information",
+      "FAQ",
+      "contact",
+      "accessibility information"
+    ],
+    "excluded": [
+      "real payments",
+      "real orders",
+      "real account authentication",
+      "live inventory",
+      "live restaurant API",
+      "browser geolocation",
+      "production customer data"
+    ]
+  },
+  "design": "Bright McDonald's-inspired visual language using yellow/red/white, bold typography, card-based merchandising, prominent ordering CTA and mobile-first responsive composition.",
+  "technical_constraints": [
+    "static HTML/CSS/JS",
+    "zero paid dependencies",
+    "localStorage for demo state",
+    "no server-side data dependency"
+  ],
+  "browser_scope": [
+    "Chromium",
+    "Firefox",
+    "WebKit where available"
+  ],
+  "accessibility_target": "WCAG 2.2 AA baseline; automated/manual runtime certification remains distinct from implementation claims.",
+  "responsive_scope": [
+    "mobile",
+    "small tablet",
+    "desktop",
+    "large desktop"
+  ],
+  "performance_budget": "Keep the prototype dependency-free; avoid unnecessary JavaScript frameworks and blocking third-party resources.",
+  "security_profile": "No credentials, payment information or real transaction endpoints; no production-side effects.",
+  "seo": [
+    "title",
+    "meta description",
+    "robots.txt",
+    "sitemap.xml"
+  ],
+  "deployment_constraints": "Do not represent as the official McDonald's website. Promote only after runtime certification.",
+  "rollback_policy": "Promote only a known-good release; rollback to the last certified commit if a critical production defect appears.",
+  "monitoring_requirements": [
+    "release identity",
+    "availability",
+    "client errors",
+    "critical journey health where deployment infrastructure exists"
+  ],
+  "success_criteria": [
+    "core navigation works",
+    "menu can be browsed and filtered",
+    "products can be added to cart",
+    "cart persists locally",
+    "demo checkout validates and completes",
+    "rewards state updates locally",
+    "sample restaurants can be selected",
+    "responsive layout is coherent",
+    "no unsupported live-business claims"
+  ],
+  "definition_of_done": "Candidate implemented, statically validated, remote content syntax-checked, evidence recorded, and any unavailable runtime capabilities explicitly marked BLOCKED."
+}

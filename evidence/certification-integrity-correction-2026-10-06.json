@@ -1,0 +1,27 @@
+{
+  "incident_id": "AEOS-EVID-2026-10-06-001",
+  "type": "evidence_integrity_process_correction",
+  "severity": "LOW",
+  "detected_during": "final certification handoff loop",
+  "rule": "After certification, evidence becomes append-only; historical certification evidence must not be rewritten.",
+  "issue": {
+    "file": "evidence/runtime-certification-2026-10-06.json",
+    "problem": "An earlier loop updated this historical certification file instead of creating a new append-only evidence record.",
+    "corrective_discovery": "The original file content was verified directly at commit fda0212996471499b1afe339743d3c126fac8c71."
+  },
+  "impact_assessment": {
+    "implementation": "NONE — no product implementation files were changed by the evidence correction.",
+    "validator": "NONE — run #35 remains an independently completed successful validation.",
+    "historical_recoverability": "HIGH — the original certification record is preserved in Git history at the verified pre-update commit.",
+    "release_decision": "No new product release blocker was introduced; the candidate remains subject to human final acceptance."
+  },
+  "recovery_actions": [
+    "Verified the original historical certification record at commit fda0212996471499b1afe339743d3c126fac8c71.",
+    "Added a separate append-only final-head certification record for run #35.",
+    "Updated AEOS_STATUS.md to distinguish the frozen implementation artifact from later documentation/evidence checkpoints.",
+    "Recorded this correction as an append-only incident record.",
+    "Did not rewrite the historical file again."
+  ],
+  "current_status": "CORRECTION RECORDED — historical source remains recoverable from immutable Git history.",
+  "release_boundary": "CERTIFIED RELEASE CANDIDATE — READY FOR HUMAN ACCEPTANCE; NOT DEPLOYED; NOT MERGED INTO main."
+}

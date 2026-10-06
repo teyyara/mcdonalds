@@ -1,0 +1,26 @@
+{
+  "candidate_branch": "aeos/mcdonalds-release-candidate",
+  "validated_commit": "4e5091d4fa434cf78c1cb4d2eba73242083d33e0",
+  "primary_artifact": "index.html",
+  "artifact_blob_sha": "f201fc0c770e7c8a11cf7c01f4b081c7a1ac28af",
+  "validation": {
+    "local_source_syntax": "PASS on prior local candidate",
+    "remote_embedded_script_syntax": "PASS",
+    "required_sections": "PASS",
+    "local_storage_state": "PASS",
+    "demo_boundary": "PASS",
+    "reduced_motion": "PASS",
+    "skip_navigation": "PASS",
+    "live_menu_search_binding": "PASS",
+    "http_static_server_on_prior_local_candidate": "PASS"
+  },
+  "blocked": {
+    "browser_runtime": "BLOCKED",
+    "firefox_runtime": "BLOCKED",
+    "webkit_runtime": "BLOCKED",
+    "actual_safari": "BLOCKED",
+    "screen_reader_runtime": "BLOCKED",
+    "production_observation": "BLOCKED"
+  },
+  "note": "Artifact SHA-256 was not generated in the connector runtime; the exact Git blob SHA for index.html is recorded."
+}

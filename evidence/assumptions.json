@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ASSUMP-001",
+    "assumption": "Use the U.S. McDonald's public experience as the reference market because the keyphrase does not name a country.",
+    "source": "Official country selector + current U.S. site research",
+    "confidence": "HIGH",
+    "impact": "MEDIUM",
+    "resolution": "Retain explicit demo/non-official boundary and market caveat."
+  },
+  {
+    "id": "ASSUMP-002",
+    "assumption": "Use illustrative menu prices and fictional restaurant locations rather than presenting unsupported live values.",
+    "source": "Requirement-resolution hierarchy; official site notes prices/availability vary by location",
+    "confidence": "HIGH",
+    "impact": "HIGH",
+    "resolution": "Persist as demo-only data in UI and evidence."
+  }
+]

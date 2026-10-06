@@ -1,0 +1,33 @@
+{
+  "project_level": "W1",
+  "risks": [
+    {
+      "id": "RISK-001",
+      "tier": "R2",
+      "area": "UX",
+      "description": "Long-lived page re-rendering from carousel could disrupt user scroll/focus.",
+      "mitigation": "Hero auto-advance now updates only hero state/DOM."
+    },
+    {
+      "id": "RISK-002",
+      "tier": "R2",
+      "area": "Content",
+      "description": "Market-specific live prices/availability could be misrepresented.",
+      "mitigation": "All sample data is explicitly labelled as demo/illustrative."
+    },
+    {
+      "id": "RISK-003",
+      "tier": "R2",
+      "area": "Dependency",
+      "description": "Remote official image URLs can fail or change.",
+      "mitigation": "No critical business logic depends on image availability; product image errors are tolerated visually."
+    },
+    {
+      "id": "RISK-004",
+      "tier": "R4",
+      "area": "Commerce",
+      "description": "Real payment/order integrity is unvalidated because no payment backend exists.",
+      "mitigation": "Checkout is local-only and explicitly non-production."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "release_id": "AEOS-MCD-2026-10-06-CERTIFIED-01",
+  "validated_artifact_commit": "fda0212996471499b1afe339743d3c126fac8c71",
+  "candidate_branch": "aeos/mcdonalds-release-candidate",
+  "certification_run": {
+    "workflow": "Autonomous Website Validation",
+    "run_id": 37507832395,
+    "run_number": 32,
+    "conclusion": "success",
+    "playwright_axe_job_id": 112420924339,
+    "lighthouse_job_id": 112420924757,
+    "runner_os": "Ubuntu 24.04.5 LTS"
+  },
+  "browser_evidence": {
+    "targets": [
+      "Chromium",
+      "Firefox",
+      "WebKit",
+      "Mobile Chromium"
+    ],
+    "evidence_artifact_id": 11433060873,
+    "evidence_artifact_sha256": "sha256:140681bf19004f8d55c2695da50b7064e335a1d28eecac7140f3e5b403bc08ef",
+    "note": "Desktop and mobile screenshots were captured after explicitly priming lazy-loaded images."
+  },
+  "gates": {
+    "requirements": "PASS",
+    "critical_journeys": "PASS",
+    "accessibility": "PASS — no critical or serious axe violations on covered routes",
+    "responsive": "PASS — mobile no-overflow validation plus desktop/mobile browser evidence",
+    "performance": "PASS — 15 Lighthouse runs across 5 routes; configured quality thresholds passed",
+    "security": "PASS — scoped client-only demo threat model; no payment/account backend or secret surface; not a substitute for a dedicated appsec audit",
+    "seo": "PASS",
+    "visual_quality": "PASS — rendered desktop/mobile evidence inspected",
+    "ux_quality": "PASS — covered navigation, menu search/filtering, product details, cart, rewards, locator, forms and demo checkout",
+    "robustness": "PASS — covered client-state edge cases and guarded empty-cart/form flows; production failure injection remains not applicable to this static demo",
+    "validator_assurance": "PASS — exact commit checkout, pinned validator versions, browser matrix, repeated Lighthouse runs",
+    "stability": "PASS",
+    "regression": "PASS — current suite green; no prior accepted product baseline existed",
+    "evidence_completeness": "PASS for defined candidate scope and available environments",
+    "artifact_identity": "PASS — final candidate head fda0212996471499b1afe339743d3c126fac8c71 is the exact head certified by run #32; the stable main history was incorporated without changing the certified implementation tree"
+  },
+  "confidence": {
+    "requirements": "HIGH",
+    "functional": "HIGH",
+    "accessibility": "MEDIUM — automated runtime evidence, not WCAG certification",
+    "performance": "HIGH",
+    "security": "MEDIUM — scoped static/client review, no dedicated dynamic appsec scanner",
+    "visual": "HIGH — direct rendered screenshot inspection",
+    "production": "LOW — candidate is not deployed",
+    "business_outcome": "LOW / NOT MEASURED"
+  },
+  "production_status": "CERTIFIED RELEASE CANDIDATE — READY FOR HUMAN ACCEPTANCE; NOT DEPLOYED",
+  "decision": "READY FOR HUMAN ACCEPTANCE",
+  "residual_risks": [
+    "External image dependencies remain runtime dependencies.",
+    "Menu prices, restaurants, availability and rewards are explicitly illustrative demo data rather than production business facts.",
+    "No real account, payment, ordering or production observability layer is present.",
+    "WebKit evidence is not equivalent to testing actual Safari.",
+    "Automated accessibility evidence is not manual screen-reader or formal WCAG certification.",
+    "No real-user or commercial outcome evidence exists yet."
+  ],
+  "historical_evidence_note": "The earlier blocked release decision remains preserved in evidence/release-decision.json and is not overwritten."
+}

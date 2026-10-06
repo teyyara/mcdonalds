@@ -1,0 +1,32 @@
+{
+  "release_id": "AEOS-MCD-2026-10-06-CANDIDATE-01",
+  "candidate_branch": "aeos/mcdonalds-release-candidate",
+  "latest_commit": "f5c352a7a2cec4720d72fbe272c8bcc4c7e8f73c",
+  "requirements": "PARTIAL — implementation exists; runtime certification unavailable",
+  "critical_journeys": "BLOCKED — browser runtime unavailable",
+  "accessibility": "BLOCKED — runtime keyboard/screen-reader observation unavailable",
+  "responsive": "BLOCKED — runtime screenshot/viewport observation unavailable",
+  "performance": "PARTIAL — static dependency-free architecture only; lab metrics not observed",
+  "security": "PARTIAL — source-level scope reviewed; active scanner capability unavailable",
+  "seo": "PASS_STATIC — title/meta/robots/sitemap present",
+  "visual": "BLOCKED — actual rendered visual examination unavailable",
+  "ux": "PARTIAL — source composition reviewed; natural runtime observation unavailable",
+  "robustness": "BLOCKED — browser failure-injection unavailable",
+  "regression": "PARTIAL — repository started empty; no prior accepted implementation baseline",
+  "validator_assurance": "PARTIAL — static validator available; runtime mutation assurance unavailable",
+  "evidence_completeness": "PASS for available static evidence; runtime evidence unavailable",
+  "production_readiness": "BLOCKED",
+  "residual_risk": "Remote image dependencies, market-specific business data, and unavailable browser/runtime environments prevent production certification.",
+  "business_outcome": "NOT YET MEASURABLE",
+  "confidence": {
+    "requirements": "MEDIUM",
+    "functional": "MEDIUM",
+    "accessibility": "LOW",
+    "performance": "LOW",
+    "security": "MEDIUM",
+    "visual": "LOW",
+    "production": "LOW",
+    "business_outcome": "LOW"
+  },
+  "decision": "DO NOT RELEASE"
+}

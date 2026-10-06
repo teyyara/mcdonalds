@@ -1,0 +1,14 @@
+{
+  "name": "mcdonalds-website-candidate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "McDonald's-style autonomous website candidate",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:chromium": "playwright test --project=chromium"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0"
+  }
+}
