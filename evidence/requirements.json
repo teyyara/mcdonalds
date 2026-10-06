@@ -1,0 +1,62 @@
+[
+  {
+    "id": "REQ-001",
+    "requirement": "Homepage exposes primary menu, deals, rewards and locator journeys.",
+    "risk": "R2",
+    "validation": "static route/control inspection + runtime journey when available"
+  },
+  {
+    "id": "REQ-002",
+    "requirement": "Menu supports category selection and text search.",
+    "risk": "R2",
+    "validation": "interaction test"
+  },
+  {
+    "id": "REQ-003",
+    "requirement": "Product details can be opened and quantities adjusted.",
+    "risk": "R1",
+    "validation": "interaction test"
+  },
+  {
+    "id": "REQ-004",
+    "requirement": "Items can be added to a persistent local cart and quantities changed.",
+    "risk": "R2",
+    "validation": "interaction test + localStorage inspection"
+  },
+  {
+    "id": "REQ-005",
+    "requirement": "Demo checkout validates required fields and produces a confirmation state.",
+    "risk": "R2",
+    "validation": "form journey"
+  },
+  {
+    "id": "REQ-006",
+    "requirement": "Rewards points can be earned and redeemed locally.",
+    "risk": "R1",
+    "validation": "state journey"
+  },
+  {
+    "id": "REQ-007",
+    "requirement": "Sample restaurant locations can be searched and selected.",
+    "risk": "R2",
+    "validation": "locator journey"
+  },
+  {
+    "id": "REQ-008",
+    "requirement": "Keyboard/focus/reduced-motion accessibility provisions are present.",
+    "risk": "R2",
+    "validation": "static accessibility inspection + keyboard runtime when available"
+  },
+  {
+    "id": "REQ-009",
+    "requirement": "SEO basics are present.",
+    "risk": "R1",
+    "validation": "static metadata inspection"
+  },
+  {
+    "id": "REQ-010",
+    "requirement": "No demo data is represented as live production business data.",
+    "risk": "R2",
+    "validation": "content/provenance review"
+  }
+]
