@@ -29,3 +29,7 @@ Then open `http://localhost:4173/`.
 Real McDonald's prices, restaurant locations, order availability and account state are not universal and can vary by market. This project therefore marks sample prices and locations as demo data rather than presenting invented values as real production information.
 
 Product/menu naming and digital-experience patterns are grounded in current official McDonald's pages listed in `evidence/research/keyphrase-dossier.md`.
+
+## Current validation state
+
+The active release candidate is validated by the repository's GitHub Actions workflow on PR synchronization. Runtime certification remains evidence-driven; a green browser/Lighthouse run is required before release.
