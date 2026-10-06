@@ -1,0 +1,23 @@
+{
+  "release_id": "AEOS-MCD-2026-10-06-CANDIDATE-01",
+  "branch": "aeos/mcdonalds-release-candidate",
+  "keyphrase": "Build a fully functional mcdonalds website",
+  "research_status": "COMPLETE",
+  "certification_status": "BLOCKED — runtime capabilities unavailable",
+  "exact_validated_artifact": {
+    "path": "index.html",
+    "blob_sha": "f201fc0c770e7c8a11cf7c01f4b081c7a1ac28af"
+  },
+  "evidence_files": [
+    "evidence/research/keyphrase-dossier.md",
+    "evidence/product-contract.json",
+    "evidence/requirements.json",
+    "evidence/capabilities.json",
+    "evidence/release-decision.json",
+    "evidence/assumptions.json",
+    "evidence/risk.json",
+    "evidence/decisions.json",
+    "evidence/build.json",
+    "evidence/manifest.json"
+  ]
+}
