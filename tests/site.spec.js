@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { AxeBuilder } = require('@axe-core/playwright');
 
 const routes = [
-  ['home', /I'm Lovin' It/],
+  ['home', /MONOPOLY® is back\./],
   ['menu', /Good food, fast\./],
   ['deals', /Deals worth checking\./],
   ['rewards', /Your points, your demo\./],
