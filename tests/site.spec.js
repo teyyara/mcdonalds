@@ -17,7 +17,7 @@ const routes = [
 ];
 
 async function reset(page) {
-  await page.goto('/', { waitUntil: 'domcontentloaded' }, { waitUntil: 'domcontentloaded' });
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => localStorage.clear());
   await page.reload({ waitUntil: 'domcontentloaded' });
 }
