@@ -1,0 +1,35 @@
+[
+  {
+    "id": "DEC-001",
+    "context": "Repository was empty.",
+    "options": [
+      "Introduce framework and dependency graph",
+      "Use a self-contained static site"
+    ],
+    "chosen": "Self-contained static site",
+    "reason": "Smallest justified dependency surface and compatible with zero-paid-dependency requirement.",
+    "reversible": true
+  },
+  {
+    "id": "DEC-002",
+    "context": "Market not specified.",
+    "options": [
+      "Invent a market",
+      "Use official U.S. experience as reference with caveat"
+    ],
+    "chosen": "U.S. reference with caveat",
+    "reason": "Strongest current first-party evidence found while preserving uncertainty.",
+    "reversible": true
+  },
+  {
+    "id": "DEC-003",
+    "context": "Real ordering would require payment/backend credentials.",
+    "options": [
+      "Fake a real order system",
+      "Build local demo checkout"
+    ],
+    "chosen": "Local demo checkout",
+    "reason": "Avoids fabricated capabilities, real financial side effects and credential requirements.",
+    "reversible": true
+  }
+]
