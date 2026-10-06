@@ -50,6 +50,7 @@ jobs:
           name: browser-evidence-${{ github.sha }}
           path: test-results/
           if-no-files-found: warn
+          include-hidden-files: true
           retention-days: 14
 
   lighthouse:
