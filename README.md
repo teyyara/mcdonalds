@@ -32,9 +32,9 @@ Product/menu naming and digital-experience patterns are grounded in current offi
 
 ## Current validation state
 
-The active release candidate is validated by the repository's GitHub Actions workflow on PR synchronization. The exact candidate commit `17baa3fdd0736f6802493a041bc68da7f9edb3f0` passed the full Playwright/axe browser certification and Lighthouse quality gate.
+The active release candidate is certified by the repository's GitHub Actions workflow. The exact implementation checkpoint `7a76d52fa394575e028a2e6dcd527b05125119d9` passed the full Playwright/axe browser certification and Lighthouse quality gate. The certification record is preserved in `evidence/runtime-certification-2026-10-06.json`.
 
-The candidate is being promoted through Pull Request #1 after resolving the README-only branch divergence with `main`. `main` remains the stable handoff branch until the post-merge validation run is green.
+The candidate is **ready for human acceptance** but is not deployed and is not yet merged into `main`. Promotion must preserve the exact validated implementation artifact and must pass post-merge validation before any production claim.
 
 ## Progress / review
 
