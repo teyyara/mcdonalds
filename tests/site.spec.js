@@ -39,10 +39,19 @@ test('homepage renders with core navigation and no page errors', async ({ page }
 
   await expect(page).toHaveTitle(/McDonald's/);
   const header = page.locator('header');
-  await expect(header.getByRole('link', { name: 'Our Menu' }).first()).toBeVisible();
-  await expect(header.getByRole('link', { name: 'Rewards' }).first()).toBeVisible();
-  await expect(header.getByRole('link', { name: 'Locate' }).first()).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Order Now' })).toBeVisible();
+  const mobile = (page.viewportSize()?.width || 1280) <= 820;
+  if (mobile) {
+    await expect(page.locator('#hamb')).toBeVisible();
+    await page.locator('#hamb').click();
+    await expect(page.locator('#mobileNav').getByRole('link', { name: 'Our Menu' })).toBeVisible();
+    await expect(page.locator('#mobileNav').getByRole('link', { name: 'Rewards' })).toBeVisible();
+    await expect(page.locator('#mobileNav').getByRole('link', { name: 'Locate' })).toBeVisible();
+  } else {
+    await expect(header.getByRole('link', { name: 'Our Menu' }).first()).toBeVisible();
+    await expect(header.getByRole('link', { name: 'Rewards' }).first()).toBeVisible();
+    await expect(header.getByRole('link', { name: 'Locate' }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Order Now' })).toBeVisible();
+  }
 
   expect(pageErrors).toEqual([]);
   expect(consoleErrors).toEqual([]);
